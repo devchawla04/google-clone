@@ -1,54 +1,133 @@
-
 .home{
     display: flex;
     flex-direction: column;
     height: 100vh;
-
+    background-color: #fff;
 }
 .home_header{
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
     align-items: center;
- 
+    height: 70px;
 }
 
 .home_header a{
 text-decoration: none;
-font-size: 15px;
+font-size: 16px;
 margin-right: 20px;
 color: rgba(0,0,0,0.87);
-
+transition: color 0.2s ease;
+font-weight: 500;
 }
 .home_header a:hover{
    text-decoration: underline;
-    
-    }
-
+   color: #1a73e8;
+}
 
 .header_right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     min-width: 13vw;
- 
+    padding-right: 10px;
 }
 .header_right> .MuiSvgIcon-root{
-margin-right: 18px;
- 
+color: #5f6368;
+cursor: pointer;
+padding: 12px;
+border-radius: 50%;
+transition: all 0.2s;
+font-size: 34px !important;
+min-width: 48px;
+min-height: 48px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.header_right > .MuiSvgIcon-root:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #1a73e8;
+    transform: scale(1.1);
 }
 
 .home_body{
 display: flex;
-
-margin-top: 10%;
-justify-content: center;
-
-    }
+flex-direction: column;
+align-items: center;
+margin-top: 12%;
+}
     
-
 .home_body > img{
 object-fit: contain;
-height:100px ;
+height:92px ;
+margin-bottom: 30px;
 }
 
+.search_container {
+    width: 100%;
+    max-width: 584px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .home_header {
+        padding: 15px;
+        height: auto;
+    }
+
+    .home_header a {
+        font-size: 14px;
+        margin-right: 12px;
+    }
+
+    .header_right {
+        gap: 10px;
+        padding-right: 0;
+    }
+
+    .header_right > .MuiSvgIcon-root {
+        padding: 8px;
+        font-size: 28px !important;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .home_body {
+        margin-top: 20%;
+    }
+
+    .home_body > img {
+        height: 70px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home_header {
+        padding: 10px;
+    }
+
+    .home_header a {
+        font-size: 13px;
+        margin-right: 8px;
+    }
+
+    .header_right > .MuiSvgIcon-root {
+        padding: 6px;
+        font-size: 24px !important;
+        min-width: 36px;
+        min-height: 36px;
+    }
+
+    .home_body {
+        margin-top: 25%;
+    }
+
+    .home_body > img {
+        height: 60px;
+        margin-bottom: 15px;
+    }
+}

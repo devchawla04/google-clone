@@ -12,7 +12,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 function SearchPage() {
-const [{term},dispatch] = useStateValue();
+const [{term}] = useStateValue();
 // live api call
 const {data} = useGoogleSearch(term);
 
